@@ -161,7 +161,17 @@ var numberFormatters =
 		' HE',
 		' HF',
 		' HG',
-		' HH'
+		' HH',
+		' ',
+		' ',
+		' ',
+		' ',
+		' ',
+		' ',
+		' ',
+		' ',
+		' ',
+		' '
 	]),
 	formatEveryThirdPower([
 		'',
