@@ -138,7 +138,23 @@ var numberFormatters =
 		' septemtrigintillion',
 		' octotrigintillion',
 		' novemtrigintillion',
-		' quadragintillion',	
+		' quadragintillion',
+		' aa',
+		' AA',
+		' bb',
+		' BB',
+		' cc',
+		' CC',
+		' dd',
+		' DD',
+		' ee',
+		' EE',
+		' ff',
+		' FF',
+		' gg',
+		' GG',
+		' hh',
+		' HH'
 	]),
 	formatEveryThirdPower([
 		'',
@@ -171,7 +187,17 @@ var numberFormatters =
 		' SpVi',
 		' OVi',
 		' NVi',
-		' Trig'
+		' Tri',
+		' UTri',
+		' DTri',
+		' TTri',
+		' QaTri',
+		' QiTri',
+		' SxTri',
+		' SpTri',
+		' OTri',
+		' NTri',
+		' Quadragintillion'
 	])
 ];
 
