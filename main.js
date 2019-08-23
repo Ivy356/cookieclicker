@@ -6226,35 +6226,35 @@ Game.Launch=function()
 		}
 		
 		//define objects
-		new Game.Object('Cursor','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 10 seconds.',0,0,{},15,function(){
+		new Game.Object('Cursor','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 1 second.',1,1,{},15,function(){
 			var add=0;
-			if (Game.Has('Thousand fingers')) add+=		0.1;
-			if (Game.Has('Million fingers')) add+=		0.5;
-			if (Game.Has('Billion fingers')) add+=		5;
-			if (Game.Has('Trillion fingers')) add+=		50;
-			if (Game.Has('Quadrillion fingers')) add+=	500;
-			if (Game.Has('Quintillion fingers')) add+=	5000;
-			if (Game.Has('Sextillion fingers')) add+=	50000;
-			if (Game.Has('Septillion fingers')) add+=	500000;
-			if (Game.Has('Octillion fingers')) add+=	5000000;
+			if (Game.Has('Thousand fingers')) add+=		1;
+			if (Game.Has('Million fingers')) add+=		5;
+			if (Game.Has('Billion fingers')) add+=		50;
+			if (Game.Has('Trillion fingers')) add+=		500;
+			if (Game.Has('Quadrillion fingers')) add+=	5000;
+			if (Game.Has('Quintillion fingers')) add+=	50000;
+			if (Game.Has('Sextillion fingers')) add+=	500000;
+			if (Game.Has('Septillion fingers')) add+=	999999999999;
+			if (Game.Has('Octillion fingers')) add+=	999999999999999;
 			var mult=1;
 			var num=0;
 			for (var i in Game.Objects) {if (Game.Objects[i].name!='Cursor') num+=Game.Objects[i].amount;}
 			add=add*num;
 			mult*=Game.magicCpS('Cursor');
-			return Game.ComputeCps(0.1,Game.Has('Reinforced index finger')+Game.Has('Carpal tunnel prevention cream')+Game.Has('Ambidextrous'),add)*mult;
+			return Game.ComputeCps(1,Game.Has('Reinforced index finger')+Game.Has('Carpal tunnel prevention cream')+Game.Has('Ambidextrous'),add)*mult;
 		},function(){
-			if (this.amount>=1) Game.Unlock(['Reinforced index finger','Carpal tunnel prevention cream']);
-			if (this.amount>=10) Game.Unlock('Ambidextrous');
-			if (this.amount>=25) Game.Unlock('Thousand fingers');
-			if (this.amount>=50) Game.Unlock('Million fingers');
-			if (this.amount>=100) Game.Unlock('Billion fingers');
-			if (this.amount>=150) Game.Unlock('Trillion fingers');
-			if (this.amount>=200) Game.Unlock('Quadrillion fingers');
-			if (this.amount>=250) Game.Unlock('Quintillion fingers');
-			if (this.amount>=300) Game.Unlock('Sextillion fingers');
-			if (this.amount>=350) Game.Unlock('Septillion fingers');
-			if (this.amount>=400) Game.Unlock('Octillion fingers');
+			if (this.amount>=10) Game.Unlock(['Reinforced index finger','Carpal tunnel prevention cream']);
+			if (this.amount>=25) Game.Unlock('Ambidextrous');
+			if (this.amount>=50) Game.Unlock('Thousand fingers');
+			if (this.amount>=100) Game.Unlock('Million fingers');
+			if (this.amount>=150) Game.Unlock('Billion fingers');
+			if (this.amount>=200) Game.Unlock('Trillion fingers');
+			if (this.amount>=250) Game.Unlock('Quadrillion fingers');
+			if (this.amount>=300) Game.Unlock('Quintillion fingers');
+			if (this.amount>=350) Game.Unlock('Sextillion fingers');
+			if (this.amount>=400) Game.Unlock('Septillion fingers');
+			if (this.amount>=500) Game.Unlock('Octillion fingers');
 			
 			if (this.amount>=1) Game.Win('Click');if (this.amount>=2) Game.Win('Double-click');if (this.amount>=50) Game.Win('Mouse wheel');if (this.amount>=100) Game.Win('Of Mice and Men');if (this.amount>=200) Game.Win('The Digital');if (this.amount>=300) Game.Win('Extreme polydactyly');if (this.amount>=400) Game.Win('Dr. T');if (this.amount>=500) Game.Win('Thumbs, phalanges, metacarpals');
 		});
