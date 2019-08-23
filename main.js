@@ -128,7 +128,17 @@ var numberFormatters =
 		' septemvigintillion',
 		' octovigintillion',
 		' novemvigintillion',
-		' trigintillion'	
+		' trigintillion',
+		' untrigintillion',
+		' duotrigintillion',
+		' tretrigintillion',
+		' quattuortrigintillion',
+		' quintrigintillion',
+		' sestrigintillion',
+		' septemtrigintillion',
+		' octotrigintillion',
+		' novemtrigintillion',
+		' quadragintillion',	
 	]),
 	formatEveryThirdPower([
 		'',
@@ -152,6 +162,16 @@ var numberFormatters =
 		' Ocd',
 		' Nod',
 		' Vi',
+		' UVi',
+		' DVi',
+		' TVi',
+		' QaVi',
+		' QiVi',
+		' SxVi',
+		' SpVi',
+		' OVi',
+		' NVi',
+		' Trig'
 	])
 ];
 
