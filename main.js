@@ -113,7 +113,22 @@ var numberFormatters =
 		' duodecillion',
 		' tredecillion',
 		' quattuordecillion',
-		' quindecillion'
+		' quindecillion',
+		' sexdecillion',
+		' septendecillion',
+		' octodecillion',
+		' novemdecillion',
+		' vigintillion',
+		' unvigintillion',
+		' duovigintillion',
+		' tresvigintillion',
+		' quattuorvigintillion',
+		' quinvigintillion',
+		' sesvigintillion',
+		' septemvigintillion',
+		' octovigintillion',
+		' novemvigintillion',
+		' trigintillion'	
 	]),
 	formatEveryThirdPower([
 		'',
@@ -131,7 +146,12 @@ var numberFormatters =
 		' DoD',
 		' TrD',
 		' QaD',
-		' QiD'
+		' QiD',
+		' Sxd',
+		' Spd',
+		' Ocd',
+		' Nod',
+		' Vi',
 	])
 ];
 
