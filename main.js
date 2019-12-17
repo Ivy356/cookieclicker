@@ -286,7 +286,7 @@ var numberFormatters =
 		' !',
 		' !',
 		' !',
-		' !',
+		' !'
 	])
 ];
 
@@ -5670,7 +5670,7 @@ Game.Launch=function()
 		Game.last=0;
 		
 		Game.storeToRefresh=1;
-		Game.priceIncrease=1.15;
+		Game.priceIncrease=1.10;
 		Game.buyBulk=1;
 		Game.buyMode=1;//1 for buy, -1 for sell
 		Game.buyBulkOld=Game.buyBulk;//used to undo changes from holding Shift or Ctrl
@@ -6240,7 +6240,8 @@ Game.Launch=function()
 			else if (id==2) Game.buyBulk=1;
 			else if (id==3) Game.buyBulk=10;
 			else if (id==4) Game.buyBulk=100;
-			else if (id==5) Game.buyBulk=-1;
+			else if (id==5) Game.buyBulk=1000;
+			else if (id==6) Game.buyBulk=-1;
 			
 			if (Game.buyMode==1 && Game.buyBulk==-1) Game.buyBulk=100;
 			
@@ -6250,6 +6251,7 @@ Game.Launch=function()
 			if (Game.buyBulk==1) l('storeBulk1').className='storeBulkAmount selected'; else l('storeBulk1').className='storeBulkAmount';
 			if (Game.buyBulk==10) l('storeBulk10').className='storeBulkAmount selected'; else l('storeBulk10').className='storeBulkAmount';
 			if (Game.buyBulk==100) l('storeBulk100').className='storeBulkAmount selected'; else l('storeBulk100').className='storeBulkAmount';
+			if (Game.buyBulk==1000) l('storeBulk1000').className='storeBulkAmount selected'; else l('storeBulk1000').className='storeBulkAmount';
 			if (Game.buyBulk==-1) l('storeBulkMax').className='storeBulkAmount selected'; else l('storeBulkMax').className='storeBulkAmount';
 			
 			if (Game.buyMode==1)
@@ -6278,7 +6280,8 @@ Game.Launch=function()
 				'<div id="storeBulk1" class="storeBulkAmount" '+Game.clickStr+'="Game.storeBulkButton(2);">1</div>'+
 				'<div id="storeBulk10" class="storeBulkAmount" '+Game.clickStr+'="Game.storeBulkButton(3);">10</div>'+
 				'<div id="storeBulk100" class="storeBulkAmount" '+Game.clickStr+'="Game.storeBulkButton(4);">100</div>'+
-				'<div id="storeBulkMax" class="storeBulkAmount" '+Game.clickStr+'="Game.storeBulkButton(5);">all</div>'+
+				'<div id="storeBulk1000" class="storeBulkAmount" '+Game.clickStr+'="Game.storeBulkButton(5);">1000</div>'+
+				'<div id="storeBulkMax" class="storeBulkAmount" '+Game.clickStr+'="Game.storeBulkButton(6);">Max</div>'+
 				'</div>';
 			for (var i in Game.Objects)
 			{
@@ -6381,7 +6384,7 @@ Game.Launch=function()
 		}
 		
 		//define objects
-		new Game.Object('Cursor','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 1 second.',1,1,{},15,function(){
+		new Game.Object('Cursor','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 1 second.',0.1,0.1,{},15,function(){
 			var add=0;
 			if (Game.Has('Thousand fingers')) add+=		1;
 			if (Game.Has('Million fingers')) add+=		5;
@@ -6392,6 +6395,8 @@ Game.Launch=function()
 			if (Game.Has('Sextillion fingers')) add+=	500000;
 			if (Game.Has('Septillion fingers')) add+=	999999999999;
 			if (Game.Has('Octillion fingers')) add+=	999999999999999;
+			if (Game.Has('Nonillion fingers')) add+=	9999999999999999999;
+			if (Game.Has('Decillion fingers')) add+=	999999999999999999999999;
 			var mult=1;
 			var num=0;
 			for (var i in Game.Objects) {if (Game.Objects[i].name!='Cursor') num+=Game.Objects[i].amount;}
@@ -6410,8 +6415,10 @@ Game.Launch=function()
 			if (this.amount>=350) Game.Unlock('Sextillion fingers');
 			if (this.amount>=400) Game.Unlock('Septillion fingers');
 			if (this.amount>=500) Game.Unlock('Octillion fingers');
+			if (this.amount>=600) Game.Unlock('Nonillion fingers');
+			if (this.amount>=750) Game.Unlock('Decillion fingers');
 			
-			if (this.amount>=1) Game.Win('Click');if (this.amount>=2) Game.Win('Double-click');if (this.amount>=50) Game.Win('Mouse wheel');if (this.amount>=100) Game.Win('Of Mice and Men');if (this.amount>=200) Game.Win('The Digital');if (this.amount>=300) Game.Win('Extreme polydactyly');if (this.amount>=400) Game.Win('Dr. T');if (this.amount>=500) Game.Win('Thumbs, phalanges, metacarpals');
+			if (this.amount>=1) Game.Win('Click');if (this.amount>=2) Game.Win('Double-click');if (this.amount>=50) Game.Win('Mouse wheel');if (this.amount>=100) Game.Win('Of Mice and Men');if (this.amount>=200) Game.Win('The Digital');if (this.amount>=300) Game.Win('Extreme polydactyly');if (this.amount>=400) Game.Win('Dr. T');if (this.amount>=500) Game.Win('Thumbs, phalanges, metacarpals');if (this.amount>=600) Game.Win('Finger Mania');if (this.amount>=750) Game.Win('Finger of Doom');
 		});
 		
 		Game.SpecialGrandmaUnlock=15;
