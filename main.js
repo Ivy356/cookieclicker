@@ -86,7 +86,7 @@ function formatEveryThirdPower(notations)
 				value /= 1000;
 				base++;
 			}
-			if (base>=notations.length) {return 'Infinity';} else {notationValue = notations[base];}
+			if (base>=notations.length) {return 'Too Many';} else {notationValue = notations[base];}
 		}
 		return ( Math.round(value * 1000) / 1000 ) + notationValue;
 	};
@@ -159,7 +159,7 @@ var numberFormatters =
 		' DD',
 		' E',
 		' EE',
-		' ff',
+		' F',
 		' FF',
 		' G',
 		' GG',
@@ -277,16 +277,16 @@ var numberFormatters =
 		' ***',
 		' ****',
 		' *****',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !'
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot'
 	])
 ];
 
