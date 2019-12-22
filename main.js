@@ -172,34 +172,34 @@ var numberFormatters =
 		' HF',
 		' HG',
 		' HH',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' ',
-		' '
+		' I',
+		' II',
+		' J',
+		' JJ',
+		' KK',
+		' L',
+		' LL',
+		' LLL',
+		' LLL',
+		' ?',
+		' ??',
+		' ??',
+		' *',
+		' **',
+		' ***',
+		' ****',
+		' *****',
+		' !',
+		' !',
+		' !',
+		' !',
+		' !',
+		' !',
+		' !',
+		' !',
+		' !',
+		' !',
+		' !'
 	]),
 	formatEveryThirdPower([
 		'',
@@ -242,7 +242,7 @@ var numberFormatters =
 		' SpTri',
 		' OTri',
 		' NTri',
-		' Quadragintillion',
+		' Quadrag',
 		' aa',
 		' bb',
 		' cc',
@@ -6393,10 +6393,12 @@ Game.Launch=function()
 			if (Game.Has('Quadrillion fingers')) add+=	5000;
 			if (Game.Has('Quintillion fingers')) add+=	50000;
 			if (Game.Has('Sextillion fingers')) add+=	500000;
-			if (Game.Has('Septillion fingers')) add+=	999999999999;
-			if (Game.Has('Octillion fingers')) add+=	999999999999999;
-			if (Game.Has('Nonillion fingers')) add+=	9999999999999999999;
-			if (Game.Has('Decillion fingers')) add+=	999999999999999999999999;
+			if (Game.Has('Septillion fingers')) add+=	5000000;
+			if (Game.Has('Octillion fingers')) add+=	100000000;
+			if (Game.Has('Nonillion fingers')) add+=	1000000000;
+			if (Game.Has('Decillion fingers')) add+=	10000000000;
+			if (Game.Has('Undecillion fingers')) add+=	1000000000000;
+			if (Game.Has('Duodecillion fingers')) add+=	100000000000000;
 			var mult=1;
 			var num=0;
 			for (var i in Game.Objects) {if (Game.Objects[i].name!='Cursor') num+=Game.Objects[i].amount;}
@@ -6417,6 +6419,8 @@ Game.Launch=function()
 			if (this.amount>=500) Game.Unlock('Octillion fingers');
 			if (this.amount>=600) Game.Unlock('Nonillion fingers');
 			if (this.amount>=750) Game.Unlock('Decillion fingers');
+			if (this.amount>=850) Game.Unlock('Undecillion fingers');
+			if (this.amount>=1000) Game.Unlock('Duodecillion fingers');
 			
 			if (this.amount>=1) Game.Win('Click');if (this.amount>=2) Game.Win('Double-click');if (this.amount>=50) Game.Win('Mouse wheel');if (this.amount>=100) Game.Win('Of Mice and Men');if (this.amount>=200) Game.Win('The Digital');if (this.amount>=300) Game.Win('Extreme polydactyly');if (this.amount>=400) Game.Win('Dr. T');if (this.amount>=500) Game.Win('Thumbs, phalanges, metacarpals');if (this.amount>=600) Game.Win('Finger Mania');if (this.amount>=750) Game.Win('Finger of Doom');
 		});
@@ -7489,6 +7493,10 @@ Game.Launch=function()
 		order=100;
 		new Game.Upgrade('Septillion fingers','The mouse and cursors gain <b>+500000</b> cookies for each non-cursor object owned.<q>[cursory flavor text]</q>',10000000000000000000,[12,20]);
 		new Game.Upgrade('Octillion fingers','The mouse and cursors gain <b>+5000000</b> cookies for each non-cursor object owned.<q>Turns out you <b>can</b> quite put your finger on it.</q>',10000000000000000000000,[12,19]);
+		new Game.Upgrade('Nonillion fingers','The mouse and cursors gain <b>+100000000</b> cookies for each non-cursor object owned.<q>[cursory flavor text]</q>',1000000000000000000000,[12,20]);
+		new Game.Upgrade('Decillion fingers','The mouse and cursors gain <b>+1000000000</b> cookies for each non-cursor object owned.<q>Turns out you <b>can</b> quite put your finger on it.</q>',1000000000000000000000000,[12,19]);
+		new Game.Upgrade('Undecillion fingers','The mouse and cursors gain <b>+100000000000</b> cookies for each non-cursor object owned.<q>[cursory flavor text]</q>',10000000000000000000000,[12,20]);
+		new Game.Upgrade('Duodecillion fingers','The mouse and cursors gain <b>+10000000000000</b> cookies for each non-cursor object owned.<q>Turns out you <b>can</b> quite put your finger on it.</q>',100000000000000000000000000,[12,19]);
 		
 		order=150;new Game.Upgrade('Eludium mouse','Clicking gains <b>+1% of your CpS</b>.<q>I rodent do that if I were you.</q>',500000000000000,[11,15]);
 		new Game.Upgrade('Wishalloy mouse','Clicking gains <b>+1% of your CpS</b>.<q>Clicking is fine and dandy, but don\'t smash your mouse over it. Get your game on. Go play.</q>',50000000000000000,[11,16]);
