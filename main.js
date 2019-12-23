@@ -78,7 +78,7 @@ function formatEveryThirdPower(notations)
 	{
 		var base = 0,
 		notationValue = '';
-		if (value >= 1000000 && isFinite(value))
+		if (value >= 1e100 && isFinite(value))
 		{
 			value /= 1000;
 			while(Math.round(value) >= 1000)
@@ -86,7 +86,7 @@ function formatEveryThirdPower(notations)
 				value /= 1000;
 				base++;
 			}
-			if (base>=notations.length) {return 'Too Many';} else {notationValue = notations[base];}
+			if (base>=notations.length) {return 'A Lot!';} else {notationValue = notations[base];}
 		}
 		return ( Math.round(value * 1000) / 1000 ) + notationValue;
 	};
@@ -98,7 +98,7 @@ var numberFormatters =
 [
 	rawFormatter,
 	formatEveryThirdPower([
-		'',
+		' K',
 		' million',
 		' billion',
 		' trillion',
@@ -179,27 +179,20 @@ var numberFormatters =
 		' KK',
 		' L',
 		' LL',
-		' LLL',
-		' LLL',
+		' #',
+		' ##',
 		' ?',
 		' ??',
-		' ??',
+		' ???',
 		' *',
 		' **',
 		' ***',
 		' ****',
 		' *****',
 		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !',
-		' !'
+		' !!',
+		' !!!',
+		' undefined'
 	]),
 	formatEveryThirdPower([
 		'',
@@ -295,7 +288,7 @@ function Beautify(value,floats)
 	var negative=(value<0);
 	var decimal='';
 	var fixed=value.toFixed(floats);
-	if (value<1000000 && floats>0 && Math.floor(fixed)!=fixed) decimal='.'+(fixed.toString()).split('.')[1];
+	if (value<1e100 && floats>0 && Math.floor(fixed)!=fixed) decimal='.'+(fixed.toString()).split('.')[1];
 	value=Math.floor(Math.abs(value));
 	if (floats>0 && fixed==value+1) value++;
 	var formatter=numberFormatters[Game.prefs.format?0:1];
