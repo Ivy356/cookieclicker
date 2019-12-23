@@ -78,7 +78,7 @@ function formatEveryThirdPower(notations)
 	{
 		var base = 0,
 		notationValue = '';
-		if (value >= 1e100 && isFinite(value))
+		if (value >= 1000 && isFinite(value))
 		{
 			value /= 1000;
 			while(Math.round(value) >= 1000)
@@ -288,7 +288,7 @@ function Beautify(value,floats)
 	var negative=(value<0);
 	var decimal='';
 	var fixed=value.toFixed(floats);
-	if (value<1e100 && floats>0 && Math.floor(fixed)!=fixed) decimal='.'+(fixed.toString()).split('.')[1];
+	if (value<1000 && floats>0 && Math.floor(fixed)!=fixed) decimal='.'+(fixed.toString()).split('.')[1];
 	value=Math.floor(Math.abs(value));
 	if (floats>0 && fixed==value+1) value++;
 	var formatter=numberFormatters[Game.prefs.format?0:1];
