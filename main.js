@@ -86,7 +86,7 @@ function formatEveryThirdPower(notations)
 				value /= 1000;
 				base++;
 			}
-			if (base>=notations.length) {return 'A Lot!';} else {notationValue = notations[base];}
+			if (base>=notations.length) {return 'Infinity';} else {notationValue = notations[base];}
 		}
 		return ( Math.round(value * 1000) / 1000 ) + notationValue;
 	};
@@ -184,15 +184,24 @@ var numberFormatters =
 		' ?',
 		' ??',
 		' ???',
+		' !',
+		' !!',
+		' !!!',
 		' *',
 		' **',
 		' ***',
 		' ****',
 		' *****',
-		' !',
-		' !!',
-		' !!!',
-		' undefined'
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot',
+		' A Lot'
 	]),
 	formatEveryThirdPower([
 		'',
@@ -6377,7 +6386,7 @@ Game.Launch=function()
 		}
 		
 		//define objects
-		new Game.Object('Cursor','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 1 second.',0.1,0.1,{},15,function(){
+		new Game.Object('Cursor','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 10 seconds.',0.1,0.1,{},15,function(){
 			var add=0;
 			if (Game.Has('Thousand fingers')) add+=		1;
 			if (Game.Has('Million fingers')) add+=		5;
@@ -6392,6 +6401,8 @@ Game.Launch=function()
 			if (Game.Has('Decillion fingers')) add+=	10000000000;
 			if (Game.Has('Undecillion fingers')) add+=	1000000000000;
 			if (Game.Has('Duodecillion fingers')) add+=	100000000000000;
+			if (Game.Has('Tredecillion fingers')) add+=	100000000000000000;
+			if (Game.Has('Quattuordecillion fingers')) add+=       10000000000000000000;
 			var mult=1;
 			var num=0;
 			for (var i in Game.Objects) {if (Game.Objects[i].name!='Cursor') num+=Game.Objects[i].amount;}
@@ -6414,6 +6425,8 @@ Game.Launch=function()
 			if (this.amount>=750) Game.Unlock('Decillion fingers');
 			if (this.amount>=850) Game.Unlock('Undecillion fingers');
 			if (this.amount>=1000) Game.Unlock('Duodecillion fingers');
+			if (this.amount>=1250) Game.Unlock('Tredecillion fingers');
+			if (this.amount>=1500) Game.Unlock('Quattuordecillion fingers');
 			
 			if (this.amount>=1) Game.Win('Click');if (this.amount>=2) Game.Win('Double-click');if (this.amount>=50) Game.Win('Mouse wheel');if (this.amount>=100) Game.Win('Of Mice and Men');if (this.amount>=200) Game.Win('The Digital');if (this.amount>=300) Game.Win('Extreme polydactyly');if (this.amount>=400) Game.Win('Dr. T');if (this.amount>=500) Game.Win('Thumbs, phalanges, metacarpals');if (this.amount>=600) Game.Win('Finger Mania');if (this.amount>=750) Game.Win('Finger of Doom');
 		});
@@ -7486,10 +7499,13 @@ Game.Launch=function()
 		order=100;
 		new Game.Upgrade('Septillion fingers','The mouse and cursors gain <b>+500000</b> cookies for each non-cursor object owned.<q>[cursory flavor text]</q>',10000000000000000000,[12,20]);
 		new Game.Upgrade('Octillion fingers','The mouse and cursors gain <b>+5000000</b> cookies for each non-cursor object owned.<q>Turns out you <b>can</b> quite put your finger on it.</q>',10000000000000000000000,[12,19]);
-		new Game.Upgrade('Nonillion fingers','The mouse and cursors gain <b>+100000000</b> cookies for each non-cursor object owned.<q>[cursory flavor text]</q>',1000000000000000000000,[12,20]);
-		new Game.Upgrade('Decillion fingers','The mouse and cursors gain <b>+1000000000</b> cookies for each non-cursor object owned.<q>Turns out you <b>can</b> quite put your finger on it.</q>',1000000000000000000000000,[12,19]);
-		new Game.Upgrade('Undecillion fingers','The mouse and cursors gain <b>+100000000000</b> cookies for each non-cursor object owned.<q>[cursory flavor text]</q>',10000000000000000000000,[12,20]);
-		new Game.Upgrade('Duodecillion fingers','The mouse and cursors gain <b>+10000000000000</b> cookies for each non-cursor object owned.<q>Turns out you <b>can</b> quite put your finger on it.</q>',100000000000000000000000000,[12,19]);
+		new Game.Upgrade('Nonillion fingers','The mouse and cursors gain <b>+100000000</b> cookies for each non-cursor object owned.<q>Clickers beware!</q>',1000000000000000000000,[12,20]);
+		new Game.Upgrade('Decillion fingers','The mouse and cursors gain <b>+1000000000</b> cookies for each non-cursor object owned.<q>Fingers of the World!</q>',1000000000000000000000000,[12,21]);
+		new Game.Upgrade('Undecillion fingers','The mouse and cursors gain <b>+100000000000</b> cookies for each non-cursor object owned.<q>Made <b>clicks</b> always clicks.</q>',10000000000000000000000,[12,22]);
+		new Game.Upgrade('Duodecillion fingers','The mouse and cursors gain <b>+10000000000000</b> cookies for each non-cursor object owned.<q>Finger squad is ready!</q>',100000000000000000000000000,[12,23]);
+		new Game.Upgrade('Tredecillion fingers','The mouse and cursors gain <b>+10000000000000000</b> cookies for each non-cursor object owned.<q>Its over 9000 fingers!</q>',1000000000000000000000000000,[12,22]);
+		new Game.Upgrade('Quattuordecillion fingers','The mouse and cursors gain <b>+10000000000000000000</b> cookies for each non-cursor object owned.<q>The fingers have clicked everything except humans.</q>',100000000000000000000000000000000,[12,23]);
+		
 		
 		order=150;new Game.Upgrade('Eludium mouse','Clicking gains <b>+1% of your CpS</b>.<q>I rodent do that if I were you.</q>',500000000000000,[11,15]);
 		new Game.Upgrade('Wishalloy mouse','Clicking gains <b>+1% of your CpS</b>.<q>Clicking is fine and dandy, but don\'t smash your mouse over it. Get your game on. Go play.</q>',50000000000000000,[11,16]);
