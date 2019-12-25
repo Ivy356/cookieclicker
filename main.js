@@ -3244,6 +3244,12 @@ Game.Launch=function()
 			if (Game.Has('Sextillion fingers')) add+=	50000;
 			if (Game.Has('Septillion fingers')) add+=	500000;
 			if (Game.Has('Octillion fingers')) add+=	5000000;
+			if (Game.Has('Nonillion fingers')) add+=	10000000;
+			if (Game.Has('Decillion fingers')) add+=	100000000;
+			if (Game.Has('Undecillion fingers')) add+=	10000000000;
+			if (Game.Has('Duodecillion fingers')) add+=	1000000000000;
+			if (Game.Has('Tredecillion fingers')) add+=	1000000000000000;
+			if (Game.Has('Quattuordecillion fingers')) add+=	100000000000000000;
 			var num=0;
 			for (var i in Game.Objects) {num+=Game.Objects[i].amount;}
 			num-=Game.Objects['Cursor'].amount;
@@ -3532,8 +3538,13 @@ Game.Launch=function()
 			if (Game.Has('Kitten specialists')) mult*=(1+Game.milkProgress*0.2*milkMult);
 			if (Game.Has('Kitten experts')) mult*=(1+Game.milkProgress*0.2*milkMult);
 			if (Game.Has('Kitten consultants')) mult*=(1+Game.milkProgress*0.2*milkMult);
-			if (Game.Has('Kitten assistants to the regional manager')) mult*=(1+Game.milkProgress*0.2*milkMult);
-			if (Game.Has('Kitten angels')) mult*=(1+Game.milkProgress*0.1*milkMult);
+			if (Game.Has('Kitten bakers')) mult*=(1+Game.milkProgress*0.3*milkMult);
+			if (Game.Has('Kitten solos')) mult*=(1+Game.milkProgress*0.325*milkMult);
+			if (Game.Has('Kitten duos')) mult*=(1+Game.milkProgress*0.35*milkMult);
+			if (Game.Has('Kitten trios')) mult*=(1+Game.milkProgress*0.4*milkMult);
+			if (Game.Has('Kitten squads')) mult*=(1+Game.milkProgress*0.5*milkMult);
+			if (Game.Has('Kitten elites')) mult*=(1+Game.milkProgress*0.5*milkMult);
+			if (Game.Has('Kitten randoms')) mult*=(1+Game.milkProgress*0.5*milkMult);
 			
 			var eggMult=1;
 			if (Game.Has('Chicken egg')) eggMult*=1.01;
@@ -7509,7 +7520,7 @@ Game.Launch=function()
 		
 		order=150;new Game.Upgrade('Eludium mouse','Clicking gains <b>+1% of your CpS</b>.<q>I rodent do that if I were you.</q>',500000000000000,[11,15]);
 		new Game.Upgrade('Wishalloy mouse','Clicking gains <b>+1% of your CpS</b>.<q>Clicking is fine and dandy, but don\'t smash your mouse over it. Get your game on. Go play.</q>',50000000000000000,[11,16]);
-		ark','Prisms are <b>twice</b> as efficient.<q>Your prisms now glow in the dark, effectively doubling their output!</q>','Prism',6);
+		new Game.Upgrade('Rainbow mark','Prisms are <b>twice</b> as efficient.<q>Your prisms now glow in the dark, effectively doubling their output!</q>','Prism',6);
 		
 		order=10032;
 		Game.NewUpgradeCookie({name:'Rose macarons',desc:'Although an odd flavor, these pastries recently rose in popularity.',icon:[22,3],require:'Box of macarons',		power:3,price: 9999});
@@ -7744,8 +7755,6 @@ Game.Launch=function()
 		new Game.Upgrade('Starter kitchen','You start with <b>5 grandmas</b>.<q>Where did these come from?</q>',5000,[1,14]);Game.last.pool='prestige';Game.last.parents=['Starter kit'];
 		new Game.Upgrade('Halo gloves','Clicks are <b>10% more powerful</b>.<q>Smite that cookie.</q>',55555,[22,7]);Game.last.pool='prestige';Game.last.parents=['Starter kit'];
 
-		new Game.Upgrade('Kitten angels','You gain <b>more CpS</b> the more milk you have.<q>All cats go to heaven.</q>',9000,[23,7]);Game.last.pool='prestige';Game.last.parents=['Dominions'];Game.last.kitten=1;
-		
 		new Game.Upgrade('Unholy bait','Wrinklers appear <b>5 times</b> as fast.<q>No wrinkler can resist the scent of worm biscuits.</q>',44444,[15,12]);Game.last.pool='prestige';Game.last.parents=['Starter kitchen'];
 		new Game.Upgrade('Sacrilegious corruption','Wrinklers regurgitate <b>5%</b> more cookies.<q>Unique in the animal kingdom, the wrinkler digestive tract is able to withstand an incredible degree of dilation - provided you prod them appropriately.</q>',444444,[19,8]);Game.last.pool='prestige';Game.last.parents=['Unholy bait'];
 		
@@ -7788,10 +7797,6 @@ Game.Launch=function()
 		new Game.Upgrade('Kitten experts','You gain <b>more CpS</b> the more milk you have.<q>10 years expurrrtise in the cookie business, sir</q>',900000000000000000000000000000,Game.GetIcon('Kitten',8));Game.last.kitten=1;
 		new Game.Upgrade('Kitten masters','You gain <b>more CpS</b> the more milk you have.<q>master of growth of cookies, sir</q>',900000000000000000000000000000000,Game.GetIcon('Kitten',9));Game.last.kitten=1;
 		new Game.Upgrade('Kitten bakers','You gain <b>more CpS</b> the more milk you have.<q>we are super bakers, sir</q>',900000000000000000000000000000000000,Game.GetIcon('Kitten',10));Game.last.kitten=1;
-		new Game.Upgrade('Kitten solos','You gain <b>more CpS</b> the more milk you have.<q>1 cat in a solo, sir</q>',900000000000000000000000000000000000000,Game.GetIcon('Kitten',11));Game.last.kitten=1;
-		new Game.Upgrade('Kitten duos','You gain <b>more CpS</b> the more milk you have.<q>2 cats in a duo, sir</q>',900000000000000000000000000000000000000000,Game.GetIcon('Kitten',12));Game.last.kitten=1;
-		new Game.Upgrade('Kitten trios','You gain <b>more CpS</b> the more milk you have.<q>3 cats in an trio, sir</q>',900000000000000000000000000000000000000000000,Game.GetIcon('Kitten',13));Game.last.kitten=1;
-		new Game.Upgrade('Kitten squads','You gain <b>more CpS</b> the more milk you have.<q>4 cats in a squad, sir</q>',900000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',14));Game.last.kitten=1;
 		
 		new Game.Upgrade('How to bake your dragon','Allows you to purchase a <b>crumbly egg</b> once you have earned 1 million cookies.<q>A tome full of helpful tips such as "oh god, stay away from it", "why did we buy this thing, it\'s not even house-broken" and "groom twice a week in the direction of the scales".</q>',9,[22,12]);Game.last.pool='prestige';
 
@@ -7911,6 +7916,14 @@ Game.Launch=function()
 		Game.NewUpgradeCookie({name:'Shortbread biscuits',desc:'These rich butter cookies are neither short, nor bread. What a country!',icon:[23,10],power:						4,price: 99999999999999999999999});
 		Game.NewUpgradeCookie({name:'Millionaires\' shortbreads',desc:'Three thought-provoking layers of creamy chocolate, hard-working caramel and crumbly biscuit in a poignant commentary of class struggle.',icon:[24,10],power:						4,price: 99999999999999999999999*5});
 		Game.NewUpgradeCookie({name:'Caramel cookies',desc:'The polymerized carbohydrates adorning these cookies are sure to stick to your teeth for quite a while.',icon:[25,10],power:						4,price: 999999999999999999999999});
+		
+		order=20000;
+		new Game.Upgrade('Kitten solos','You gain <b>more CpS</b> the more milk you have.<q>1 cat in a solo, sir</q>',900000000000000000000000000000000000000,Game.GetIcon('Kitten',11));Game.last.kitten=1;
+		new Game.Upgrade('Kitten duos','You gain <b>more CpS</b> the more milk you have.<q>2 cats in a duo, sir</q>',900000000000000000000000000000000000000000,Game.GetIcon('Kitten',12));Game.last.kitten=1;
+		new Game.Upgrade('Kitten trios','You gain <b>more CpS</b> the more milk you have.<q>3 cats in an trio, sir</q>',900000000000000000000000000000000000000000000,Game.GetIcon('Kitten',13));Game.last.kitten=1;
+		new Game.Upgrade('Kitten squads','You gain <b>more CpS</b> the more milk you have.<q>4 cats in a squad, sir</q>',900000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',14));Game.last.kitten=1;
+		new Game.Upgrade('Kitten elites','You gain <b>more CpS</b> the more milk you have.<q>5 cats in an elite, sir</q>',900000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',13));Game.last.kitten=1;
+		new Game.Upgrade('Kitten squads','You gain <b>more CpS</b> the more milk you have.<q>We are random cats, sir</q>',900000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',14));Game.last.kitten=1;
 		
 		
 		var desc=function(totalHours){
