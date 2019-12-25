@@ -7368,7 +7368,6 @@ Game.Launch=function()
 		order=20000;
 		new Game.Upgrade('Kitten overseers','You gain <b>more CpS</b> the more milk you have.<q>my purrpose is to serve you, sir</q>',90000000000000000,Game.GetIcon('Kitten',4));Game.last.kitten=1;
 		
-		
 		order=100;
 		new Game.Upgrade('Sextillion fingers','The mouse and cursors gain <b>+50000</b> cookies for each non-cursor object owned.<q>sometimes<br>things just<br>click</q>',10000000000000000,[0,19]);
 		
@@ -7928,9 +7927,6 @@ Game.Launch=function()
 		new Game.Upgrade('Kitten duos','You gain <b>more CpS</b> the more milk you have.<q>2 cats in a duo, sir</q>',900000000000000000000000000000000000000,Game.GetIcon('Kitten',11));Game.last.kitten=1;
 		new Game.Upgrade('Kitten trios','You gain <b>more CpS</b> the more milk you have.<q>3 cats in an trio, sir</q>',900000000000000000000000000000000000000000,Game.GetIcon('Kitten',18));Game.last.kitten=1;
 		new Game.Upgrade('Kitten squads','You gain <b>more CpS</b> the more milk you have.<q>4 cats in a squad, sir</q>',900000000000000000000000000000000000000000000,Game.GetIcon('Kitten',19));Game.last.kitten=1;
-		new Game.Upgrade('Kitten elites','You gain <b>more CpS</b> the more milk you have.<q>5 cats in an elite, sir</q>',900000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',20));Game.last.kitten=1;
-		new Game.Upgrade('Kitten randoms','You gain <b>more CpS</b> the more milk you have.<q>We are random cats, sir</q>',900000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',21));Game.last.kitten=1;
-		
 		
 		var desc=function(totalHours){
 			var hours=totalHours%24;
@@ -7976,9 +7972,11 @@ Game.Launch=function()
 		order=150;new Game.Upgrade('Fantasteel mouse','Clicking gains <b>+1% of your CpS</b>.<q>You could be clicking using your touchpad and we\'d be none the wiser.</q>',5000000000000000000,[11,17]);
 		new Game.Upgrade('Nevercrack mouse','Clicking gains <b>+1% of your CpS</b>.<q>How much beefier can you make a mouse until it\'s considered a rat?</q>',500000000000000000000,[11,18]);
 		
-		
 		new Game.Upgrade('Five-finger discount','All upgrades are <b>1% cheaper per 100 cursors</b>.<q>Stick it to the man.</q>',555555,[28,7],function(){Game.upgradesToRebuild=1;});Game.last.pool='prestige';Game.last.parents=['Halo gloves','Abaddon'];
 		
+		order=20000;
+		new Game.Upgrade('Kitten elites','You gain <b>more CpS</b> the more milk you have.<q>5 cats in an elite, sir</q>',900000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',20));Game.last.kitten=1;
+		new Game.Upgrade('Kitten randoms','You gain <b>more CpS</b> the more milk you have.<q>We are random cats, sir</q>',900000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',21));Game.last.kitten=1;
 		
 		order=5000;
 		new Game.SynergyUpgrade('Future almanacs','<q>Lets you predict optimal planting times. It\'s crazy what time travel can do!</q>','Farm','Time machine','synergy1');
