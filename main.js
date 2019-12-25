@@ -3545,6 +3545,14 @@ Game.Launch=function()
 			if (Game.Has('Kitten squads')) mult*=(1+Game.milkProgress*0.5*milkMult);
 			if (Game.Has('Kitten elites')) mult*=(1+Game.milkProgress*0.5*milkMult);
 			if (Game.Has('Kitten randoms')) mult*=(1+Game.milkProgress*0.5*milkMult);
+			if (Game.Has('Kitten lovers')) mult*=(1+Game.milkProgress*0.55*milkMult);
+			if (Game.Has('Kitten explorers')) mult*=(1+Game.milkProgress*0.6*milkMult);
+			if (Game.Has('Kitten paradise')) mult*=(1+Game.milkProgress*0.65*milkMult);
+			if (Game.Has('Kitten clickers')) mult*=(1+Game.milkProgress*0.7*milkMult);
+			if (Game.Has('Kitten angels')) mult*=(1+Game.milkProgress*0.75*milkMult);
+			if (Game.Has('Kitten of the World')) mult*=(1+Game.milkProgress*0.75*milkMult);
+			if (Game.Has('Kitten soldiers')) mult*=(1+Game.milkProgress*0.85*milkMult);
+			if (Game.Has('Kitten gods')) mult*=(1+Game.milkProgress*1.00*milkMult);
 			
 			var eggMult=1;
 			if (Game.Has('Chicken egg')) eggMult*=1.01;
@@ -7919,11 +7927,11 @@ Game.Launch=function()
 		
 		order=20000;
 		new Game.Upgrade('Kitten solos','You gain <b>more CpS</b> the more milk you have.<q>1 cat in a solo, sir</q>',900000000000000000000000000000000000000,Game.GetIcon('Kitten',11));Game.last.kitten=1;
-		new Game.Upgrade('Kitten duos','You gain <b>more CpS</b> the more milk you have.<q>2 cats in a duo, sir</q>',900000000000000000000000000000000000000000,Game.GetIcon('Kitten',12));Game.last.kitten=1;
-		new Game.Upgrade('Kitten trios','You gain <b>more CpS</b> the more milk you have.<q>3 cats in an trio, sir</q>',900000000000000000000000000000000000000000000,Game.GetIcon('Kitten',13));Game.last.kitten=1;
-		new Game.Upgrade('Kitten squads','You gain <b>more CpS</b> the more milk you have.<q>4 cats in a squad, sir</q>',900000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',14));Game.last.kitten=1;
-		new Game.Upgrade('Kitten elites','You gain <b>more CpS</b> the more milk you have.<q>5 cats in an elite, sir</q>',900000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',13));Game.last.kitten=1;
-		new Game.Upgrade('Kitten squads','You gain <b>more CpS</b> the more milk you have.<q>We are random cats, sir</q>',900000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',14));Game.last.kitten=1;
+		new Game.Upgrade('Kitten duos','You gain <b>more CpS</b> the more milk you have.<q>2 cats in a duo, sir</q>',900000000000000000000000000000000000000000,Game.GetIcon('Kitten',18));Game.last.kitten=1;
+		new Game.Upgrade('Kitten trios','You gain <b>more CpS</b> the more milk you have.<q>3 cats in an trio, sir</q>',900000000000000000000000000000000000000000000,Game.GetIcon('Kitten',19));Game.last.kitten=1;
+		new Game.Upgrade('Kitten squads','You gain <b>more CpS</b> the more milk you have.<q>4 cats in a squad, sir</q>',900000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',20));Game.last.kitten=1;
+		new Game.Upgrade('Kitten elites','You gain <b>more CpS</b> the more milk you have.<q>5 cats in an elite, sir</q>',900000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',21));Game.last.kitten=1;
+		new Game.Upgrade('Kitten randoms','You gain <b>more CpS</b> the more milk you have.<q>We are random cats, sir</q>',900000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',22));Game.last.kitten=1;
 		
 		
 		var desc=function(totalHours){
@@ -8043,6 +8051,7 @@ Game.Launch=function()
 		new Game.Upgrade('Diabetica Daemonicus','Sugar lumps mature <b>an hour sooner</b>.<q>A malevolent, if delicious herb that is said to grow on the cliffs of the darkest abyss of the underworld.</q>',300000000,[26,15]);Game.last.pool='prestige';Game.last.parents=['Stevia Caelestis','Lucifer'];
 		new Game.Upgrade('Sucralosia Inutilis','Bifurcated sugar lumps appear <b>5% more often</b> and are <b>5% more likely</b> to drop 2 lumps.<q>A rare berry of uninteresting flavor that is as elusive as its uses are limited; only sought-after by the most avid collectors with too much wealth on their hands.</q>',1000000000,[27,15]);Game.last.pool='prestige';Game.last.parents=['Diabetica Daemonicus'];
 		
+		
 		//note : these showIf functions stop working beyond 10 quadrillion prestige level, due to loss in precision; the solution, of course, is to make sure 10 quadrillion is not an attainable prestige level
 		new Game.Upgrade('Lucky digit','<b>+1%</b> prestige level effect on CpS.<br><b>+1%</b> golden cookie effect duration.<br><b>+1%</b> golden cookie lifespan.<q>This upgrade is a bit shy and only appears when your prestige level ends in 7.</q>',777,[24,15]);Game.last.pool='prestige';Game.last.parents=['Heavenly luck'];Game.last.showIf=function(){return (Math.ceil(Game.prestige)%10==7);};
 		new Game.Upgrade('Lucky number','<b>+1%</b> prestige level effect on CpS.<br><b>+1%</b> golden cookie effect duration.<br><b>+1%</b> golden cookie lifespan.<q>This upgrade is a reclusive hermit and only appears when your prestige level ends in 777.</q>',77777,[24,15]);Game.last.pool='prestige';Game.last.parents=['Lucky digit','Lasting fortune'];Game.last.showIf=function(){return (Math.ceil(Game.prestige)%1000==777);};
@@ -8100,7 +8109,11 @@ Game.Launch=function()
 		new Game.SynergyUpgrade('Gemmed talismans','<q>Good-luck charms covered in ancient and excruciatingly rare crystals. A must have for job interviews!</q>','Chancemaker','Mine','synergy1');
 		
 		order=20000;
-		new Game.Upgrade('Kitten consultants','You gain <b>more CpS</b> the more milk you have.<q>glad to be overpaid to work with you, sir</q>',900000000000000000000000000000000,Game.GetIcon('Kitten',9));Game.last.kitten=1;
+		new Game.Upgrade('Kitten lovers','You gain <b>more CpS</b> the more milk you have.<q>We are cookie lovers, sir</q>',900000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',23));Game.last.kitten=1;
+		new Game.Upgrade('Kitten explorers','You gain <b>more CpS</b> the more milk you have.<q>We are exploring for cookies, sir</q>',900000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',24));Game.last.kitten=1;
+		new Game.Upgrade('Kitten paradise','You gain <b>more CpS</b> the more milk you have.<q>We have a island with all friendly cats, sir</q>',900000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',25));Game.last.kitten=1;
+		new Game.Upgrade('Kitten clickers','You gain <b>more CpS</b> the more milk you have.<q>Clicking our way for kittens, sir</q>',900000000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',26));Game.last.kitten=1;
+		
 		
 		order=99999;
 		var years=Math.floor((Date.now()-new Date(2013,7,8))/(1000*60*60*24*365));
