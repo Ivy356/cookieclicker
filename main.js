@@ -7514,14 +7514,14 @@ Game.Launch=function()
 		new Game.Upgrade('Kitten managers','You gain <b>more CpS</b> the more milk you have.<q>that\'s not gonna paws any problem, sir</q>',900000000000000000000,Game.GetIcon('Kitten',5));Game.last.kitten=1;
 		
 		order=100;
-		new Game.Upgrade('Septillion fingers','The mouse and cursors gain <b>+500000</b> cookies for each non-cursor object owned.<q>[cursory flavor text]</q>',10000000000000000000,[12,20]);
-		new Game.Upgrade('Octillion fingers','The mouse and cursors gain <b>+5000000</b> cookies for each non-cursor object owned.<q>Turns out you <b>can</b> quite put your finger on it.</q>',10000000000000000000000,[12,19]);
-		new Game.Upgrade('Nonillion fingers','The mouse and cursors gain <b>+100000000</b> cookies for each non-cursor object owned.<q>Clickers beware!</q>',1000000000000000000000,[12,20]);
-		new Game.Upgrade('Decillion fingers','The mouse and cursors gain <b>+1000000000</b> cookies for each non-cursor object owned.<q>Fingers of the World!</q>',1000000000000000000000000,[12,21]);
-		new Game.Upgrade('Undecillion fingers','The mouse and cursors gain <b>+100000000000</b> cookies for each non-cursor object owned.<q>Made <b>clicks</b> always clicks.</q>',10000000000000000000000,[12,22]);
-		new Game.Upgrade('Duodecillion fingers','The mouse and cursors gain <b>+10000000000000</b> cookies for each non-cursor object owned.<q>Finger squad is ready!</q>',100000000000000000000000000,[12,23]);
-		new Game.Upgrade('Tredecillion fingers','The mouse and cursors gain <b>+10000000000000000</b> cookies for each non-cursor object owned.<q>Its over 9000 fingers!</q>',1000000000000000000000000000,[12,22]);
-		new Game.Upgrade('Quattuordecillion fingers','The mouse and cursors gain <b>+10000000000000000000</b> cookies for each non-cursor object owned.<q>The fingers have clicked everything except humans.</q>',100000000000000000000000000000000,[12,23]);
+		new Game.Upgrade('Septillion fingers','The mouse and cursors gain <b>+500000</b> cookies for each non-cursor object owned.<q>[cursory flavor text]</q>',10000000000000000000,[12,19]);
+		new Game.Upgrade('Octillion fingers','The mouse and cursors gain <b>+5000000</b> cookies for each non-cursor object owned.<q>Turns out you <b>can</b> quite put your finger on it.</q>',10000000000000000000000,[12,20]);
+		new Game.Upgrade('Nonillion fingers','The mouse and cursors gain <b>+100000000</b> cookies for each non-cursor object owned.<q>Clickers beware!</q>',1000000000000000000000,[12,21]);
+		new Game.Upgrade('Decillion fingers','The mouse and cursors gain <b>+1000000000</b> cookies for each non-cursor object owned.<q>Fingers of the World!</q>',1000000000000000000000000,[12,22]);
+		new Game.Upgrade('Undecillion fingers','The mouse and cursors gain <b>+100000000000</b> cookies for each non-cursor object owned.<q>Made <b>clicks</b> always clicks.</q>',10000000000000000000000,[12,23]);
+		new Game.Upgrade('Duodecillion fingers','The mouse and cursors gain <b>+10000000000000</b> cookies for each non-cursor object owned.<q>Finger squad is ready!</q>',100000000000000000000000000,[12,24]);
+		new Game.Upgrade('Tredecillion fingers','The mouse and cursors gain <b>+10000000000000000</b> cookies for each non-cursor object owned.<q>Its over 9000 fingers!</q>',1000000000000000000000000000,[12,25]);
+		new Game.Upgrade('Quattuordecillion fingers','The mouse and cursors gain <b>+10000000000000000000</b> cookies for each non-cursor object owned.<q>The fingers have clicked everything except humans.</q>',100000000000000000000000000000000,[12,26]);
 		
 		
 		order=150;new Game.Upgrade('Eludium mouse','Clicking gains <b>+1% of your CpS</b>.<q>I rodent do that if I were you.</q>',500000000000000,[11,15]);
@@ -7793,9 +7793,7 @@ Game.Launch=function()
 		order=800;new Game.TieredUpgrade('Maddening chants','Portals are <b>twice</b> as efficient.<q>A popular verse goes like so : "jau\'hn madden jau\'hn madden aeiouaeiouaeiou brbrbrbrbrbrbr"</q>','Portal',8);
 		order=900;new Game.TieredUpgrade('Cookietopian moments of maybe','Time machines are <b>twice</b> as efficient.<q>Reminiscing how things could have been, should have been, will have been.</q>','Time machine',8);
 		order=1000;new Game.TieredUpgrade('Some other super-tiny fundamental particle? Probably?','Antimatter condensers are <b>twice</b> as efficient.<q>When even the universe is running out of ideas, that\'s when you know you\'re nearing the end.</q>','Antimatter condenser',8);
-		order=1100;
-		new Game.TieredUpgrade('Reverse shadows','Prisms are <b>twice</b> as efficient.<q>Oh man, this is really messing with your eyes.</q>','Prism',8);
-		
+		order=1100;new Game.TieredUpgrade('Reverse shadows','Prisms are <b>twice</b> as efficient.<q>Oh man, this is really messing with your eyes.</q>','Prism',8);
 		
 		order=20000;
 		new Game.Upgrade('Kitten accountants','You gain <b>more CpS</b> the more milk you have.<q>business going great, sir</q>',900000000000000000000000,Game.GetIcon('Kitten',6));Game.last.kitten=1;
@@ -7925,8 +7923,8 @@ Game.Launch=function()
 		order=20000;
 		new Game.Upgrade('Kitten solos','You gain <b>more CpS</b> the more milk you have.<q>1 cat in a solo, sir</q>',900000000000000000000000000000000000,Game.GetIcon('Kitten',10));Game.last.kitten=1;
 		new Game.Upgrade('Kitten duos','You gain <b>more CpS</b> the more milk you have.<q>2 cats in a duo, sir</q>',900000000000000000000000000000000000000,Game.GetIcon('Kitten',11));Game.last.kitten=1;
-		new Game.Upgrade('Kitten trios','You gain <b>more CpS</b> the more milk you have.<q>3 cats in an trio, sir</q>',900000000000000000000000000000000000000000,Game.GetIcon('Kitten',18));Game.last.kitten=1;
-		new Game.Upgrade('Kitten squads','You gain <b>more CpS</b> the more milk you have.<q>4 cats in a squad, sir</q>',900000000000000000000000000000000000000000000,Game.GetIcon('Kitten',19));Game.last.kitten=1;
+		new Game.Upgrade('Kitten trios','You gain <b>more CpS</b> the more milk you have.<q>3 cats in an trio, sir</q>',900000000000000000000000000000000000000000,Game.GetIcon('Kitten',12));Game.last.kitten=1;
+		new Game.Upgrade('Kitten squads','You gain <b>more CpS</b> the more milk you have.<q>4 cats in a squad, sir</q>',900000000000000000000000000000000000000000000,Game.GetIcon('Kitten',13));Game.last.kitten=1;
 		
 		var desc=function(totalHours){
 			var hours=totalHours%24;
@@ -7975,8 +7973,8 @@ Game.Launch=function()
 		new Game.Upgrade('Five-finger discount','All upgrades are <b>1% cheaper per 100 cursors</b>.<q>Stick it to the man.</q>',555555,[28,7],function(){Game.upgradesToRebuild=1;});Game.last.pool='prestige';Game.last.parents=['Halo gloves','Abaddon'];
 		
 		order=20000;
-		new Game.Upgrade('Kitten elites','You gain <b>more CpS</b> the more milk you have.<q>5 cats in an elite, sir</q>',900000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',20));Game.last.kitten=1;
-		new Game.Upgrade('Kitten randoms','You gain <b>more CpS</b> the more milk you have.<q>We are random cats, sir</q>',900000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',21));Game.last.kitten=1;
+		new Game.Upgrade('Kitten elites','You gain <b>more CpS</b> the more milk you have.<q>5 cats in an elite, sir</q>',900000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',14));Game.last.kitten=1;
+		new Game.Upgrade('Kitten randoms','You gain <b>more CpS</b> the more milk you have.<q>We are random cats, sir</q>',900000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',15));Game.last.kitten=1;
 		
 		order=5000;
 		new Game.SynergyUpgrade('Future almanacs','<q>Lets you predict optimal planting times. It\'s crazy what time travel can do!</q>','Farm','Time machine','synergy1');
@@ -8105,10 +8103,10 @@ Game.Launch=function()
 		new Game.SynergyUpgrade('Gemmed talismans','<q>Good-luck charms covered in ancient and excruciatingly rare crystals. A must have for job interviews!</q>','Chancemaker','Mine','synergy1');
 		
 		order=20000;
-		new Game.Upgrade('Kitten lovers','You gain <b>more CpS</b> the more milk you have.<q>We are cookie lovers, sir</q>',900000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',22));Game.last.kitten=1;
-		new Game.Upgrade('Kitten explorers','You gain <b>more CpS</b> the more milk you have.<q>We are exploring for cookies, sir</q>',900000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',23));Game.last.kitten=1;
-		new Game.Upgrade('Kitten paradise','You gain <b>more CpS</b> the more milk you have.<q>We have a island with all friendly cats, sir</q>',900000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',24));Game.last.kitten=1;
-		new Game.Upgrade('Kitten clickers','You gain <b>more CpS</b> the more milk you have.<q>Clicking our way for kittens, sir</q>',900000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',25));Game.last.kitten=1;
+		new Game.Upgrade('Kitten lovers','You gain <b>more CpS</b> the more milk you have.<q>We are cookie lovers, sir</q>',900000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',16));Game.last.kitten=1;
+		new Game.Upgrade('Kitten explorers','You gain <b>more CpS</b> the more milk you have.<q>We are exploring for cookies, sir</q>',900000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',17));Game.last.kitten=1;
+		new Game.Upgrade('Kitten paradise','You gain <b>more CpS</b> the more milk you have.<q>We have a island with all friendly cats, sir</q>',900000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',18));Game.last.kitten=1;
+		new Game.Upgrade('Kitten clickers','You gain <b>more CpS</b> the more milk you have.<q>Clicking our way for kittens, sir</q>',900000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',19));Game.last.kitten=1;
 		
 		
 		order=99999;
@@ -8139,10 +8137,10 @@ Game.Launch=function()
 		new Game.SynergyUpgrade('Charm quarks','<q>They\'re after your lucky quarks!</q>','Chancemaker','Antimatter condenser','synergy2');
 		
 		order=20000;
-		new Game.Upgrade('Kitten angels','You gain <b>more CpS</b> the more milk you have.<q>We are angels in heaven, sir</q>',900000000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',26));Game.last.kitten=1;
-		new Game.Upgrade('Kitten of the world','You gain <b>more CpS</b> the more milk you have.<q>We conquered the world, sir</q>',900000000000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',27));Game.last.kitten=1;
-		new Game.Upgrade('Kitten soldiers','You gain <b>more CpS</b> the more milk you have.<q>We are in World War with cookie guns, sir</q>',900000000000000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',28));Game.last.kitten=1;
-		new Game.Upgrade('Kitten gods','You gain <b>more CpS</b> the more milk you have.<q>The gods of cats, sir. And you won the game.</q>',900000000000000000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',29));Game.last.kitten=1;
+		new Game.Upgrade('Kitten angels','You gain <b>more CpS</b> the more milk you have.<q>We are angels in heaven, sir</q>',900000000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',20));Game.last.kitten=1;
+		new Game.Upgrade('Kitten of the world','You gain <b>more CpS</b> the more milk you have.<q>We conquered the world, sir</q>',900000000000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',21));Game.last.kitten=1;
+		new Game.Upgrade('Kitten soldiers','You gain <b>more CpS</b> the more milk you have.<q>We are in World War with cookie guns, sir</q>',900000000000000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',22));Game.last.kitten=1;
+		new Game.Upgrade('Kitten gods','You gain <b>more CpS</b> the more milk you have.<q>The gods of cats, sir. And you won the game.</q>',900000000000000000000000000000000000000000000000000000000000000000000000000,Game.GetIcon('Kitten',23));Game.last.kitten=1;
 		
 		//end of upgrades
 		
